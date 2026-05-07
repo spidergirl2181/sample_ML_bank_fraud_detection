@@ -1,4 +1,5 @@
-# Mermaid tree view
+# Code structure - tree view
+``` sh
 fraud_predictor/
 │
 ├── app/
@@ -23,24 +24,28 @@ fraud_predictor/
 ├── requirements.txt
 ├── Dockerfile
 └── docker-compose.yml
-
-#Run system with Docker daemon & API call:
+```
+# Run system with Docker daemon & API call:
 
 ### train model 
-python train.py
-
+``` sh
+$ python train.py
+```
 ### run API
-docker-compose up --build
-
+``` sh
+$ docker-compose up --build
+```
 ### test API
-curl http://localhost:8000/health
-
+``` sh
+$ curl http://localhost:8000/health
+```
 
 ### Prometheus scrap
 http://localhost:8000/metrics
 
 ### Predict
-curl -X POST http://localhost:8000/predict \
+``` sh
+$ curl -X POST http://localhost:8000/predict \
 -H "Content-Type: application/json" \
 -d '{
   "data": [
@@ -52,7 +57,9 @@ curl -X POST http://localhost:8000/predict \
     }
   ]
 }'
-
+```
 
 # Run system in local terminal:
-python3 inference.py --csv test/fraud_time_series_fdp.csv --horizon 24
+``` sh
+$ python inference.py --csv test/fraud_time_series_fdp.csv --horizon 24
+```
