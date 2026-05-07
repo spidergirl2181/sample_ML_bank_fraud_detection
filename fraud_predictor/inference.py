@@ -16,7 +16,7 @@ from datetime import timedelta
 
 MODEL_PATH = "artifacts/model.pkl"
 
-FEATURES = ["average_age", "is_1st_ratio", "avg_amount", "txn_velocity"]
+FEATURES = ["avg_age", "is_1st_ratio", "avg_amount", "txn_velocity"]
 
 
 # ─────────────────────────────────────────────
