@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Local Forecast (NO API)
+Local Forecast (NO API call)
 
 Usage:
   python predict_local.py --horizon 24
@@ -44,7 +44,7 @@ def load_data(path):
 
 
 # ─────────────────────────────────────────────
-# Build future features (reuse logic cũ)
+# Build future features 
 # ─────────────────────────────────────────────
 def build_future(df, horizon):
     df = df.copy()
